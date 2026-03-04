@@ -1,7 +1,8 @@
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
-import { Building2, Heart, Sparkles } from "lucide-react";
+import { Building2, Heart, Sparkles, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from "react";
 
 const divisions = [
   {
@@ -12,7 +13,7 @@ const divisions = [
       "A princípio, nosso nome era outro, mas com o tempo, precisávamos nos reinventar e escolhemos um novo, com mais significado: OCEANUM — da palavra em latim \"oceano\".",
       "Afinal, somos especialistas em cruzeiros marítimos.",
     ],
-    image: gallery2,
+    images: [gallery2, gallery1, gallery3],
     imageAlt: "Destino paradisíaco com cruzeiro",
   },
   {
@@ -23,7 +24,7 @@ const divisions = [
       "Apaixonada por viagens e com o sonho de conhecer o mundo desde criança. Atualmente, tem a bagagem de morar na Europa desde 2018, onde passou 1 ano na Itália e o restante em Londres.",
       "Visitou diversas cidades em mais de 10 países e 8 estados brasileiros, e tem planos para viajar muito mais...",
     ],
-    image: gallery1,
+    images: [gallery1, gallery3, gallery2],
     imageAlt: "Viajantes apreciando o pôr do sol no cruzeiro",
   },
   {
@@ -33,10 +34,48 @@ const divisions = [
       "Débora juntou a vontade de ter o próprio negócio, o amor por viajar, planejar viagens e a vontade de ajudar as pessoas a realizarem seus sonhos para criar a Oceanum junto com o seu marido Renan.",
       "Fizeram cursos na área de turismo, hotelaria e empreendedorismo e estão em constante estudo e treinamento para te entregar o que há de melhor.",
     ],
-    image: gallery3,
+    images: [gallery3, gallery2, gallery1],
     imageAlt: "Deck de piscina no cruzeiro",
   },
 ];
+
+const ImageSlider = ({ images, alt }: { images: string[]; alt: string }) => {
+  const [current, setCurrent] = useState(0);
+
+  const prev = () => setCurrent((c) => (c === 0 ? images.length - 1 : c - 1));
+  const next = () => setCurrent((c) => (c === images.length - 1 ? 0 : c + 1));
+
+  return (
+    <div className="relative group overflow-hidden rounded-2xl shadow-ocean">
+      <img
+        src={images[current]}
+        alt={alt}
+        className="w-full h-64 md:h-96 object-cover transition-all duration-500"
+      />
+      <button
+        onClick={prev}
+        className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-md hover:bg-background"
+      >
+        <ChevronLeft className="w-5 h-5 text-foreground" />
+      </button>
+      <button
+        onClick={next}
+        className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-md hover:bg-background"
+      >
+        <ChevronRight className="w-5 h-5 text-foreground" />
+      </button>
+      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+        {images.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrent(i)}
+            className={`w-2.5 h-2.5 rounded-full transition-all ${i === current ? "bg-primary scale-110" : "bg-background/60"}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const AboutSection = () => {
   return (
@@ -55,13 +94,7 @@ const AboutSection = () => {
               className={`flex flex-col ${i % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"} gap-8 md:gap-14 items-center`}
             >
               <div className="w-full md:w-1/2">
-                <div className="overflow-hidden rounded-2xl shadow-ocean">
-                  <img
-                    src={div.image}
-                    alt={div.imageAlt}
-                    className="w-full h-64 md:h-96 object-cover hover:scale-105 transition-transform duration-700"
-                  />
-                </div>
+                <ImageSlider images={div.images} alt={div.imageAlt} />
               </div>
               <div className="w-full md:w-1/2 space-y-4">
                 <div className="inline-flex items-center gap-3 mb-2">
