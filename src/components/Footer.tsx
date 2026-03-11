@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="relative z-10 flex flex-col items-center justify-between gap-8 rounded-3xl border border-primary-foreground/15 p-7 glass-surface-dark md:flex-row md:p-8">
           <div className="flex items-center gap-3">
-            <img src={logo} alt="Oceanun" className="h-13 w-13 rounded-xl bg-primary-foreground/10 p-1 object-contain" />
+            <img src={logo} alt="Oceanun" className="h-20 w-20 rounded-xl bg-primary-foreground/10 p-1 object-contain" />
           </div>
           <div className="text-center md:text-right space-y-2 text-sm text-primary-foreground/75">
             <p>CNPJ: 50.309.568/0001-67</p>
