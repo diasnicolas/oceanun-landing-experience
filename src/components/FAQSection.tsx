@@ -42,20 +42,21 @@ const faqs = [
 
 const FAQSection = () => {
   return (
-    <section id="faq" className="py-20 md:py-28 bg-background">
+    <section id="faq" className="section-shell bg-background py-20 md:py-28">
       <div className="container mx-auto px-4 max-w-3xl">
         <div className="text-center mb-16">
-          <span className="text-sm font-semibold text-primary uppercase tracking-widest">Tire suas dúvidas</span>
-          <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mt-3">
+          <span className="section-kicker">Tire suas dúvidas</span>
+          <h2 className="section-title">
             Perguntas <span className="text-gradient-ocean">Frequentes</span>
           </h2>
+          <div className="ocean-divider" />
         </div>
         <Accordion type="single" collapsible className="space-y-3">
           {faqs.map((faq, i) => (
             <AccordionItem
               key={i}
               value={`faq-${i}`}
-              className="bg-card border border-border rounded-xl px-6 data-[state=open]:shadow-ocean"
+              className="rounded-xl border border-primary/15 bg-card px-6 data-[state=open]:shadow-ocean"
             >
               <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary py-5">
                 {faq.q}

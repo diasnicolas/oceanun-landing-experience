@@ -48,22 +48,23 @@ const companies = [
 
 const CompaniesSection = () => {
   return (
-    <section id="companhias" className="py-20 md:py-28 bg-background">
+    <section id="companhias" className="section-shell bg-background py-20 md:py-28">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <span className="text-sm font-semibold text-primary uppercase tracking-widest">Parceiros</span>
-          <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mt-3">
+          <span className="section-kicker">Parceiros</span>
+          <h2 className="section-title">
             Principais <span className="text-gradient-ocean">Companhias</span>
           </h2>
-          <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
+          <p className="section-intro">
             Explore o mundo com as principais companhias marítimas, reconhecidas pela excelência em cruzeiros de luxo!
           </p>
+          <div className="ocean-divider" />
         </div>
         <div className="grid md:grid-cols-2 gap-8">
           {companies.map((c) => (
             <div
               key={c.name}
-              className="group rounded-2xl overflow-hidden bg-card border border-border hover:shadow-card-hover transition-all duration-500"
+              className="group overflow-hidden rounded-3xl border border-primary/10 bg-card transition-all duration-500 hover:-translate-y-1 hover:shadow-card-hover"
             >
               <div className="overflow-hidden h-56">
                 <img

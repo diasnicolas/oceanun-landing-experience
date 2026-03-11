@@ -1,4 +1,3 @@
-import logo from "@/assets/logo-oceanun.webp";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
@@ -17,17 +16,17 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-primary/10 bg-background/70 backdrop-blur-xl">
       <div className="container mx-auto flex items-center justify-between py-3 px-4">
-        <a href="#hero">
-          <img src={logo} alt="Oceanun" className="h-12 w-12 object-contain" />
-        </a>
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden md:inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+          Oceanun
+        </div>
+        <div className="hidden md:flex items-center gap-5 lg:gap-6">
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              className="rounded-full px-3 py-1.5 text-sm font-semibold text-muted-foreground transition-colors hover:bg-primary/10 hover:text-primary"
             >
               {item.label}
             </a>
@@ -35,25 +34,25 @@ const Navbar = () => {
         </div>
         <a
           href="#contato"
-          className="hidden md:inline-flex bg-primary text-primary-foreground px-5 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity"
+          className="hidden md:inline-flex rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground shadow-ocean transition-all hover:-translate-y-0.5 hover:opacity-90"
         >
           Fale Conosco
         </a>
         <button
-          className="md:hidden text-foreground"
+          className="rounded-full border border-primary/20 bg-primary/5 p-2 text-foreground md:hidden"
           onClick={() => setOpen(!open)}
         >
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
       {open && (
-        <div className="md:hidden bg-card border-t border-border px-4 pb-4 animate-fade-in">
+        <div className="animate-fade-in border-t border-primary/10 bg-background/95 px-4 pb-4 md:hidden">
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
               onClick={() => setOpen(false)}
-              className="block py-2 text-sm font-medium text-muted-foreground hover:text-primary"
+              className="mt-2 block rounded-lg bg-primary/5 px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary"
             >
               {item.label}
             </a>
@@ -61,7 +60,7 @@ const Navbar = () => {
           <a
             href="#contato"
             onClick={() => setOpen(false)}
-            className="mt-2 block bg-primary text-primary-foreground px-5 py-2 rounded-lg text-sm font-semibold text-center"
+            className="mt-3 block rounded-lg bg-primary px-5 py-2 text-center text-sm font-semibold text-primary-foreground"
           >
             Fale Conosco
           </a>

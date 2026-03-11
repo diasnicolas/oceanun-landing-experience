@@ -1,0 +1,182 @@
+DESIGN
+-------------------------
+
+COR PRIMARIA: #0053C2
+COR SECUNDÁRIA: #FFF500
+FORMATO LOGOTIPO: QUADRADO
+
+Deve ter um design focado em agencia de turismo e viagens especializada em cruzeiros e agora com seriços de pacotes completos de viagensDeve ser intuitiva, informatia, e persuadir o usuario a entrar em contato
+
+
+
+-----------------------
+Seção Hero
+-----------------------
+
+Deve ter uma chamada persuasiva e deve ter o logotipo da agencia no topo
+deve ter um CTA para ir para a seção de contato
+
+-----------------------
+Seção Sobre (dividida em 3 dubseções)
+-----------------------
+
+CLOCAR O TEXTO E UM SLIDE DE FOTOS POR DIVISÃO (ORGANIZE DA MELHOR MANEIRA PARA DESKTOP E MOBILE)
+
+DIVISÃO 1 - Agencia
+
+A agência foi fundada em Abril de 2023, com o intuito de levar experiências marcantes para todos os viajantes.
+
+A príncipio, nosso nome era outro, mas com o tempo, precisávamos nos reinventar e escolhemos um novo, com mais significado: OCEANUM - da palavra em latim "oceano".
+
+Afinal, somos especialistas em cruzeiros marítimos.
+
+DIVISÃO 2 - Fundadora
+
+Fundada por Débora Puorro, Natural de Campinas/SP, formada em Administração de Empresas e Ciências Contábeis.
+
+Apaixonada por viagens e com o sonho de conhecer o mundo desde criança.
+
+Atualmente, tem a bagagem de morar na Europa desde 2018, onde passou 1 ano na Itália e o restante em Londres.
+
+Visitou diversas cidades em mais de 10 paéses e 8 estados brasileiros, e tem planos para viajar muito mais...
+
+DIVISÃO 3 - O Sonho
+
+Débora juntou a vontade de ter o próprio negócio, o amor por viajar, planejar viagens e a vontade de ajudar as pessoas a realizarem seus sonhos para criar a Oceanum junto com o seu marido Renan.
+
+Fizeram cursos na área de turismo, hotelaria e empreendedorismo e estão em constante estudo e treinamento para te entregar o que há de melhor.
+
+-----------------------
+Seção Diferenciais
+-----------------------
+
+Atendimento Especializado: Suporte completo antes, durante e após a sua viagem, com uma equipe dedicada a tornar sua experiência perfeita.
+Reserva e Suporte Personalizados: Cuidamos de todas as etapas da sua viagem de cruzeiro, desde a escolha do pacote ideal até o desembarque.
+Pacotes Completos: Incluímos acomodação, alimentação, seguro, pacotes de bebidas, excursões e tudo que você precisa em uma única reserva, garantindo que tudo esteja organizado antes mesmo da sua viagem começar.
+Tranquilidade e Segurança: Com a Oceanun, você tem a certeza de que está sendo atendido por especialistas em cruzeiros, oferecendo mais confiança e conveniência em cada etapa.
+Atendimento Diferenciado: Diferente da concorrência, nosso foco é você, com atenção especial e soluções personalizadas para todas as suas necessidades de viagem.
+
+Com a Oceanun, será mais do que uma viagem – será uma experiência inesquecível, planejada com cuidado e atenção aos mínimos detalhes.
+
+-----------------------
+Seção de Serviços
+----------------------
+
+Pacotes completos de viagens
+Viagens de Cruzeiro
+
+
+Atendimento
+Atendimento personalizado e suporte completo via WhatsApp.
+
+Pacotes
+Oferecemos pacotes completos para que você possa ter a melhor experiência possível!
+
+Principais Rotas
+América do Sul, Caribe, Travessia, Mediterrâneo e Norte da Europa.
+
+Principais cias marítimas
+MSC, Costa Cruzeiros, Royal Caribbean, NCL, entre outros.
+
+---------------------------------------------
+Seção principais companhias (coloque uma foto por companhia)
+---------------------------------------------
+Explore o mundo com as principais companhias marítimas, reconhecidas pela excelência em cruzeiros de luxo!
+
+MSC Cruzeiros
+⎈ Elegância Italiana: A MSC é conhecida por seu design elegante e sofisticado, combinando a tradição italiana com toques modernos.
+
+⎈ Roteiros Globais: Oferece uma ampla variedade de itinerários, desde o Mediterrâneo até o Caribe e além.
+
+⎈ Gastronomia de Alto Nível: Experiências culinárias que destacam a autêntica cozinha italiana e pratos internacionais.
+
+⎈ Sustentabilidade: A MSC investe em práticas ambientais, utilizando tecnologias avançadas para reduzir o impacto ambiental de seus navios.
+
+
+
+Costa Cruzeiros
+⎈ Tradição Italiana: Uma das mais antigas companhias de cruzeiros, com um forte legado de hospitalidade e serviço.
+
+⎈ Diversidade de Rotas: Oferece uma vasta gama de destinos, incluindo Europa, Ásia e América do Sul.
+
+⎈ Ambiente Familiar: Ideal para famílias, com muitas atividades e programas para todas as idades.
+
+⎈ Festas e Eventos Temáticos: A Costa é famosa por suas festas a bordo e eventos temáticos, proporcionando entretenimento contínuo.
+
+Royal Caribbean
+⎈ Inovação em Entretenimento: Pioneira em atrações a bordo, como paredes de escalada, simuladores de surfe e parques aquáticos.
+
+⎈ Navios Modernos: Alguns dos maiores e mais avançados navios do mundo, como o Wonder of the Seas.
+
+⎈ Variedade de Destinos: Cobertura global que inclui Caribe, Alasca, Mediterrâneo, Ásia e mais.
+
+⎈ Experiências Exclusivas: Oferece excursões exclusivas em terra e experiências VIP a bordo.
+
+
+
+Norwegian Cruise Line (NCL)
+⎈ Freestyle Cruising: Flexibilidade total em refeições, sem horários fixos ou códigos de vestimenta rígidos.
+
+⎈ Navios Modernos e Criativos: Conhecida por suas inovações, como os cruzeiros com áreas específicas para adultos e amplas opções de entretenimento.
+
+⎈ Experiência Gastronômica: Oferece uma vasta seleção de restaurantes de especialidades, permitindo uma experiência culinária diversificada.
+
+⎈ Atividades e Relaxamento: Equilíbrio entre atividades emocionantes e opções de relaxamento, com spas de classe mundial e entretenimento ao vivo.
+
+---------------------------------------------
+Seção de Galeria de fotos de viagens já realizadas 
+-------------------------------------------
+
+Deve ter as fotos das viagens, deve funcionar bem para desktop e mobile
+
+---------------------------------------
+Seção de Dúvidas frequentes
+---------------------------------------
+
+Por que não tem valores no site?
+Os valores variam conforme a temporada e a localização. Por isso, mantemos o site atemporal e fornecemos informações detalhadas e atualizadas de forma personalizada via WhatsApp.
+
+Quais as formas de pagamento?
+Temos 3 possibilidades de formas de pagamento, confira:
+
+A vista, em reais via pix;
+Parcelamento em até 12 x sem juros no cartão de crédito;
+Boleto bancário também sem juros se for reserva da Msc (após análise de crédito).
+
+Como entro em contato?
+Preencha o formulário na seção de contato e será redirecionado para o WhatsApp.
+
+É necessário passaporte para embarcar em um cruzeiro internacional?
+Sim, para cruzeiros internacionais, é necessário ter um passaporte válido. Recomendamos verificar as exigências de visto para os destinos incluídos no itinerário.
+
+Há suporte durante toda a viagem?
+Sim, oferecemos atendimento especial desde o planejamento até o desembarque, garantindo que você tenha uma viagem tranquila e sem preocupações.
+
+Os valores dos pacotes de cruzeiro mudam?
+Sim, os valores variam de acordo com a temporada e a localização. Para informações detalhadas e atualizadas, entre em contato via WhatsApp.
+
+O que estão inclusos nos pacotes de cruzeiro?
+Nossos pacotes geralmente incluem acomodação, alimentação, seguro e pacotes de bebidas. Detalhes específicos podem ser personalizados conforme suas necessidades.
+
+Como faço para reservar um cruzeiro com a Oceanun ?
+As reservas podem ser feitas diretamente via WhatsApp, onde nossa equipe oferecerá suporte personalizado para encontrar o pacote ideal para você.
+
+---------------------------------------
+Seção de contato
+---------------------------------------
+
+Formulário para contato que monta uma mensagem personalizada com base nas informações preenchidas no formulario, deve ter Nome, whatsapp e um campo para descrever o que precisa
+
+Deve ter os links para as redes sociais
+	- Instagram: https://instagram.com/oceanun.ag
+	
+----------------------------------------
+Rodapé da página
+----------------------------------------
+
+Logotipo
+CNPJ: 50.309.568/0001-67
+Whatsapp: +55 (19) 97819-4930
+Instagram: https://instagram.com/oceanun.ag
+
+

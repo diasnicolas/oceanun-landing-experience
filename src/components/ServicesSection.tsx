@@ -25,7 +25,7 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="servicos" className="py-20 md:py-28 bg-ocean-gradient text-primary-foreground relative overflow-hidden">
+    <section id="servicos" className="section-shell relative overflow-hidden py-20 md:py-28 bg-ocean-radial text-primary-foreground">
       <div className="absolute inset-0 opacity-10">
         <svg viewBox="0 0 1440 320" className="absolute bottom-0 w-full">
           <path fill="currentColor" d="M0,192L48,176C96,160,192,128,288,138.7C384,149,480,203,576,218.7C672,235,768,213,864,186.7C960,160,1056,128,1152,128C1248,128,1344,160,1392,176L1440,192L1440,320L0,320Z" />
@@ -33,19 +33,20 @@ const ServicesSection = () => {
       </div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <span className="text-sm font-semibold text-secondary uppercase tracking-widest">O que fazemos</span>
-          <h2 className="text-3xl md:text-5xl font-display font-bold mt-3">
+          <span className="text-sm font-semibold text-secondary uppercase tracking-[0.22em]">O que fazemos</span>
+          <h2 className="mt-3 text-3xl font-display font-bold md:text-5xl">
             Nossos Serviços
           </h2>
           <p className="mt-4 text-primary-foreground/80 max-w-xl mx-auto">
             Pacotes completos de viagens e cruzeiros marítimos com atendimento especializado.
           </p>
+          <div className="mx-auto mt-4 h-1 w-32 rounded-full bg-gradient-to-r from-secondary/80 to-primary-foreground/60" />
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((s) => (
             <div
               key={s.title}
-              className="text-center p-8 rounded-2xl bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/15 hover:bg-primary-foreground/15 transition-colors"
+              className="rounded-2xl border border-primary-foreground/20 p-8 text-center glass-surface-dark transition-all hover:-translate-y-1 hover:bg-primary-foreground/15"
             >
               <div className="w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center mx-auto mb-5">
                 <s.icon className="w-8 h-8 text-secondary" />

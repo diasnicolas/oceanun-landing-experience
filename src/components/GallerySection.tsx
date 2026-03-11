@@ -26,25 +26,26 @@ const GallerySection = () => {
 
   return (
     <>
-      <section id="galeria" className="py-20 md:py-28 bg-ocean-gradient-light">
+      <section id="galeria" className="section-shell bg-ocean-gradient-light py-20 md:py-28">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <span className="text-sm font-semibold text-primary uppercase tracking-widest">Inspiração</span>
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mt-3">
+            <span className="section-kicker">Inspiração</span>
+            <h2 className="section-title">
               Galeria de <span className="text-gradient-ocean">Viagens</span>
             </h2>
+            <div className="ocean-divider" />
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
             {images.map((img, i) => (
               <div
                 key={i}
                 onClick={() => openLightbox(i)}
-                className={`overflow-hidden rounded-2xl shadow-ocean cursor-pointer ${i === 0 || i === 5 ? "row-span-2" : ""}`}
+                className={`cursor-pointer overflow-hidden rounded-3xl border border-primary/15 shadow-ocean ${i === 0 || i === 5 ? "row-span-2" : ""}`}
               >
                 <img
                   src={img.src}
                   alt={img.alt}
-                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-700 min-h-[200px]"
+                  className="min-h-[200px] h-full w-full object-cover transition-transform duration-700 hover:scale-110"
                 />
               </div>
             ))}
@@ -54,18 +55,18 @@ const GallerySection = () => {
 
       {lightbox !== null && (
         <div
-          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90"
           onClick={closeLightbox}
         >
           <button
             onClick={(e) => { e.stopPropagation(); closeLightbox(); }}
-            className="absolute top-6 right-6 w-10 h-10 rounded-full bg-background/20 backdrop-blur-sm flex items-center justify-center hover:bg-background/40 transition-colors"
+            className="absolute right-6 top-6 flex h-10 w-10 items-center justify-center rounded-full bg-background/20 transition-colors backdrop-blur-sm hover:bg-background/40"
           >
             <X className="w-6 h-6 text-white" />
           </button>
           <button
             onClick={(e) => { e.stopPropagation(); prev(); }}
-            className="absolute left-4 md:left-8 w-12 h-12 rounded-full bg-background/20 backdrop-blur-sm flex items-center justify-center hover:bg-background/40 transition-colors"
+            className="absolute left-4 flex h-12 w-12 items-center justify-center rounded-full bg-background/20 transition-colors backdrop-blur-sm hover:bg-background/40 md:left-8"
           >
             <ChevronLeft className="w-7 h-7 text-white" />
           </button>
@@ -73,11 +74,11 @@ const GallerySection = () => {
             src={images[lightbox].src}
             alt={images[lightbox].alt}
             onClick={(e) => e.stopPropagation()}
-            className="max-h-[85vh] max-w-[90vw] object-contain rounded-lg"
+            className="max-h-[85vh] max-w-[90vw] rounded-xl object-contain"
           />
           <button
             onClick={(e) => { e.stopPropagation(); next(); }}
-            className="absolute right-4 md:right-8 w-12 h-12 rounded-full bg-background/20 backdrop-blur-sm flex items-center justify-center hover:bg-background/40 transition-colors"
+            className="absolute right-4 flex h-12 w-12 items-center justify-center rounded-full bg-background/20 transition-colors backdrop-blur-sm hover:bg-background/40 md:right-8"
           >
             <ChevronRight className="w-7 h-7 text-white" />
           </button>

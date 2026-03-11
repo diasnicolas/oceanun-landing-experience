@@ -1,6 +1,13 @@
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
+import agencia1 from "@/assets/agencia_1_11zon.jpg";
+import agencia2 from "@/assets/agencia_2_11zon.jpg";
+import agencia3 from "@/assets/agencia_3_11zon.jpg";
+import agencia4 from "@/assets/agencia_4_11zon.jpg";
+import sobre1 from "@/assets/sobre_1_11zon.jpg";
+import sobre2 from "@/assets/sobre_2_11zon.jpg";
+import sobre3 from "@/assets/sobre_3_11zon.jpg";
+import sonhos1 from "@/assets/sonhos_1_11zon.jpg";
+import sonhos2 from "@/assets/sonhos_2_11zon.jpg";
+import sonhos3 from "@/assets/sonhos_3_11zon.jpg";
 import { Building2, Heart, Sparkles, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 
@@ -13,7 +20,7 @@ const divisions = [
       "A princípio, nosso nome era outro, mas com o tempo, precisávamos nos reinventar e escolhemos um novo, com mais significado: OCEANUM — da palavra em latim \"oceano\".",
       "Afinal, somos especialistas em cruzeiros marítimos.",
     ],
-    images: [gallery2, gallery1, gallery3],
+    images: [agencia1, agencia2, agencia3, agencia4],
     imageAlt: "Destino paradisíaco com cruzeiro",
   },
   {
@@ -24,7 +31,7 @@ const divisions = [
       "Apaixonada por viagens e com o sonho de conhecer o mundo desde criança. Atualmente, tem a bagagem de morar na Europa desde 2018, onde passou 1 ano na Itália e o restante em Londres.",
       "Visitou diversas cidades em mais de 10 países e 8 estados brasileiros, e tem planos para viajar muito mais...",
     ],
-    images: [gallery1, gallery3, gallery2],
+    images: [sobre1, sobre2, sobre3],
     imageAlt: "Viajantes apreciando o pôr do sol no cruzeiro",
   },
   {
@@ -34,7 +41,7 @@ const divisions = [
       "Débora juntou a vontade de ter o próprio negócio, o amor por viajar, planejar viagens e a vontade de ajudar as pessoas a realizarem seus sonhos para criar a Oceanum junto com o seu marido Renan.",
       "Fizeram cursos na área de turismo, hotelaria e empreendedorismo e estão em constante estudo e treinamento para te entregar o que há de melhor.",
     ],
-    images: [gallery3, gallery2, gallery1],
+    images: [sonhos1, sonhos2, sonhos3],
     imageAlt: "Deck de piscina no cruzeiro",
   },
 ];
@@ -46,21 +53,22 @@ const ImageSlider = ({ images, alt }: { images: string[]; alt: string }) => {
   const next = () => setCurrent((c) => (c === images.length - 1 ? 0 : c + 1));
 
   return (
-    <div className="relative group overflow-hidden rounded-2xl shadow-ocean">
+    <div className="group relative overflow-hidden rounded-3xl border border-primary/10 shadow-ocean">
       <img
         src={images[current]}
         alt={alt}
-        className="w-full h-64 md:h-96 object-cover transition-all duration-500"
+        className="h-64 w-full object-cover transition-all duration-500 md:h-96"
       />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent" />
       <button
         onClick={prev}
-        className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-md hover:bg-background"
+        className="absolute left-3 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-background/80 opacity-0 shadow-md transition-opacity backdrop-blur-sm hover:bg-background group-hover:opacity-100"
       >
         <ChevronLeft className="w-5 h-5 text-foreground" />
       </button>
       <button
         onClick={next}
-        className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-md hover:bg-background"
+        className="absolute right-3 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-background/80 opacity-0 shadow-md transition-opacity backdrop-blur-sm hover:bg-background group-hover:opacity-100"
       >
         <ChevronRight className="w-5 h-5 text-foreground" />
       </button>
@@ -79,13 +87,14 @@ const ImageSlider = ({ images, alt }: { images: string[]; alt: string }) => {
 
 const AboutSection = () => {
   return (
-    <section id="sobre" className="py-20 md:py-28 bg-ocean-gradient-light">
+    <section id="sobre" className="section-shell bg-ocean-gradient-light py-20 md:py-28">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <span className="text-sm font-semibold text-primary uppercase tracking-widest">Nossa História</span>
-          <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mt-3">
+          <span className="section-kicker">Nossa História</span>
+          <h2 className="section-title">
             Conheça a <span className="text-gradient-ocean">Oceanun</span>
           </h2>
+          <div className="ocean-divider" />
         </div>
         <div className="space-y-20 md:space-y-28">
           {divisions.map((div, i) => (
@@ -96,7 +105,7 @@ const AboutSection = () => {
               <div className="w-full md:w-1/2">
                 <ImageSlider images={div.images} alt={div.imageAlt} />
               </div>
-              <div className="w-full md:w-1/2 space-y-4">
+              <div className="w-full space-y-4 rounded-3xl p-7 glass-surface md:w-1/2">
                 <div className="inline-flex items-center gap-3 mb-2">
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                     <div.icon className="w-5 h-5 text-primary" />

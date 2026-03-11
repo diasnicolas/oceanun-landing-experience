@@ -13,20 +13,21 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contato" className="py-20 md:py-28 bg-ocean-gradient-light">
+    <section id="contato" className="section-shell bg-ocean-gradient-light py-20 md:py-28">
       <div className="container mx-auto px-4 max-w-2xl">
         <div className="text-center mb-12">
-          <span className="text-sm font-semibold text-primary uppercase tracking-widest">Vamos conversar</span>
-          <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mt-3">
+          <span className="section-kicker">Vamos conversar</span>
+          <h2 className="section-title">
             Entre em <span className="text-gradient-ocean">Contato</span>
           </h2>
-          <p className="mt-4 text-muted-foreground">
+          <p className="section-intro max-w-xl">
             Preencha o formulário e será redirecionado para o nosso WhatsApp.
           </p>
+          <div className="ocean-divider" />
         </div>
         <form
           onSubmit={handleSubmit}
-          className="bg-card rounded-2xl p-8 md:p-10 shadow-ocean border border-border space-y-6"
+          className="space-y-6 rounded-3xl border border-primary/15 p-8 shadow-ocean glass-surface md:p-10"
         >
           <div>
             <label className="block text-sm font-semibold text-foreground mb-2">Nome</label>
@@ -36,7 +37,7 @@ const ContactSection = () => {
               value={form.nome}
               onChange={(e) => setForm({ ...form, nome: e.target.value })}
               placeholder="Seu nome completo"
-              className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              className="w-full rounded-lg border border-input bg-background/80 px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
           <div>
@@ -47,7 +48,7 @@ const ContactSection = () => {
               value={form.whatsapp}
               onChange={(e) => setForm({ ...form, whatsapp: e.target.value })}
               placeholder="(00) 00000-0000"
-              className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              className="w-full rounded-lg border border-input bg-background/80 px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
           <div>
@@ -58,12 +59,12 @@ const ContactSection = () => {
               value={form.mensagem}
               onChange={(e) => setForm({ ...form, mensagem: e.target.value })}
               placeholder="Descreva o que você precisa..."
-              className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
+              className="w-full resize-none rounded-lg border border-input bg-background/80 px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
           <button
             type="submit"
-            className="w-full bg-primary text-primary-foreground py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2 shadow-ocean"
+            className="flex w-full items-center justify-center gap-2 rounded-lg bg-primary py-4 text-lg font-semibold text-primary-foreground shadow-ocean transition-all hover:-translate-y-0.5 hover:opacity-90"
           >
             <Send className="w-5 h-5" />
             Enviar via WhatsApp
