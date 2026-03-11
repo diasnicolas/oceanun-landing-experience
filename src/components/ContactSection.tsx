@@ -6,7 +6,7 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const msg = `Olá! Meu nome é ${form.nome}. ${form.mensagem}`;
+    const msg = `Olá! Meu nome é ${form.nome}. Meu whatsapp é ${form.whatsapp}. ${form.mensagem}`;
     const phone = "5519978194930";
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
     window.open(url, "_blank");

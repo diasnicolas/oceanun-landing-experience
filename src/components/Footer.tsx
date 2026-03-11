@@ -24,6 +24,17 @@ const Footer = () => {
         </div>
         <div className="relative z-10 mt-8 border-t border-primary-foreground/15 pt-6 text-center text-xs text-primary-foreground/50">
           © {new Date().getFullYear()} Oceanun — Todos os direitos reservados.
+          <p className="mt-2">
+            Desenvolvido por{" "}
+            <a
+              href="https://zapturize.com.br"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-secondary transition-colors"
+            >
+              ZapTurize
+            </a>
+          </p>
         </div>
       </div>
     </footer>
