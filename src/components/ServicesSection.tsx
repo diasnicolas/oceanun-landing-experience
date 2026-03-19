@@ -9,17 +9,17 @@ const services = [
   {
     icon: Package,
     title: "Pacotes Completos",
-    desc: "Oferecemos pacotes completos para que você possa ter a melhor experiência possível!",
+    desc: "Acomodação, transporte, seguro, passeios, tudo em uma única reserva.",
   },
   {
     icon: Map,
     title: "Principais Rotas",
-    desc: "América do Sul, Caribe, Travessia, Mediterrâneo e Norte da Europa.",
+    desc: "Nordeste Brasileiro, América do Sul, Caribe, Mediterrâneo e Norte da Europa",
   },
   {
     icon: Ship,
-    title: "Principais Cias Marítimas",
-    desc: "MSC, Costa Cruzeiros, Royal Caribbean, NCL, entre outros.",
+    title: "Curadoria Marítima",
+    desc: "Indicamos a opção ideal de navio e companhia de acordo com o seu perfil e objetivos de viagem.",
   },
 ];
 

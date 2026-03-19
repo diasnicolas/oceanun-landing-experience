@@ -12,14 +12,24 @@ const Footer = () => {
           <div className="text-center md:text-right space-y-2 text-sm text-primary-foreground/75">
             <p>CNPJ: 50.309.568/0001-67</p>
             <p>WhatsApp: +55 (19) 97819-4930</p>
-            <a
-              href="https://instagram.com/oceanun.ag"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 hover:text-secondary transition-colors"
-            >
-              Instagram: @oceanun.ag
-            </a>
+            <div className="flex flex-wrap items-center justify-center gap-4 md:justify-end">
+              <a
+                href="https://instagram.com/oceanun.ag"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 hover:text-secondary transition-colors"
+              >
+                Instagram: @oceanun.ag
+              </a>
+              <a
+                href="https://youtube.com/@oceanun.agencia"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 hover:text-secondary transition-colors"
+              >
+                YouTube: @oceanun.agencia
+              </a>
+            </div>
           </div>
         </div>
         <div className="relative z-10 mt-8 border-t border-primary-foreground/15 pt-6 text-center text-xs text-primary-foreground/50">

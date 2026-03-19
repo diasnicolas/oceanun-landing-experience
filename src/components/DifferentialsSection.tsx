@@ -9,12 +9,12 @@ const differentials = [
   {
     icon: Users,
     title: "Reserva Personalizada",
-    desc: "Cuidamos de todas as etapas da sua viagem de cruzeiro, desde a escolha do pacote ideal até o desembarque.",
+    desc: "Cuidamos de todas as etapas da sua viagem, seja de cruzeiro ou avião, desde a escolha do pacote ideal até o desembarque",
   },
   {
     icon: Package,
     title: "Pacotes Completos",
-    desc: "Acomodação, alimentação, seguro, pacotes de bebidas, excursões e tudo em uma única reserva.",
+    desc: "Acomodação, transporte, seguro, passeios, tudo em uma única reserva.",
   },
   {
     icon: Shield,
@@ -29,7 +29,7 @@ const differentials = [
   {
     icon: Compass,
     title: "Experiência Inesquecível",
-    desc: "Mais do que uma viagem — uma experiência planejada com cuidado e atenção aos mínimos detalhes.",
+    desc: "Mais do que uma viagem — uma experiência planejada com cuidado e atenção aos mínimos detalhes, por quem entende do assunto.",
   },
 ];
 
@@ -57,6 +57,16 @@ const DifferentialsSection = () => {
               <p className="text-muted-foreground leading-relaxed">{d.desc}</p>
             </div>
           ))}
+        </div>
+
+        <div className="mx-auto mt-12 max-w-3xl text-center">
+          <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+            <Compass className="h-6 w-6 text-primary" />
+          </div>
+          <h3 className="text-2xl font-display font-bold text-foreground">Principais Rotas</h3>
+          <p className="mt-3 leading-relaxed text-muted-foreground">
+            Nordeste Brasileiro, América do Sul, Caribe, Mediterrâneo e Norte da Europa
+          </p>
         </div>
       </div>
     </section>

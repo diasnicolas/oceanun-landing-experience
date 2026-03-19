@@ -1,88 +1,55 @@
-import mscImg from "@/assets/msc-cruise.jpg";
-import costaImg from "@/assets/costa-cruise.jpg";
-import royalImg from "@/assets/royal-caribbean.jpg";
-import nclImg from "@/assets/ncl-cruise.jpg";
+import { Quote } from "lucide-react";
 
-const companies = [
+const testimonials = [
   {
-    name: "MSC Cruzeiros",
-    image: mscImg,
-    features: [
-      "Elegância Italiana com design sofisticado e toques modernos",
-      "Roteiros globais do Mediterrâneo ao Caribe",
-      "Gastronomia de alto nível com autêntica cozinha italiana",
-      "Investimento em práticas ambientais sustentáveis",
-    ],
+    name: "Camila e Rafael",
+    route: "Cruzeiro no Caribe",
+    text: "Cada detalhe foi pensado com muito carinho. Embarcamos com tudo organizado e vivemos uma experiência inesquecível.",
   },
   {
-    name: "Costa Cruzeiros",
-    image: costaImg,
-    features: [
-      "Tradição italiana com forte legado de hospitalidade",
-      "Diversidade de rotas: Europa, Ásia e América do Sul",
-      "Ambiente familiar com programas para todas as idades",
-      "Festas e eventos temáticos a bordo",
-    ],
+    name: "Priscila A.",
+    route: "Pacote completo no Nordeste Brasileiro",
+    text: "Foi nossa primeira viagem em família com esse nível de suporte. A Oceanun cuidou de tudo com agilidade e atenção.",
   },
   {
-    name: "Royal Caribbean",
-    image: royalImg,
-    features: [
-      "Pioneira em atrações: escalada, surfe e parques aquáticos",
-      "Maiores e mais avançados navios do mundo",
-      "Cobertura global: Caribe, Alasca, Mediterrâneo, Ásia",
-      "Excursões exclusivas e experiências VIP a bordo",
-    ],
+    name: "Daniel M.",
+    route: "Mediterrâneo",
+    text: "Atendimento impecável do início ao fim. Recebemos orientações claras e aproveitamos cada etapa sem preocupações.",
   },
   {
-    name: "Norwegian Cruise Line",
-    image: nclImg,
-    features: [
-      "Freestyle Cruising: flexibilidade total em refeições",
-      "Navios modernos com áreas exclusivas para adultos",
-      "Vasta seleção de restaurantes de especialidades",
-      "Spas de classe mundial e entretenimento ao vivo",
-    ],
+    name: "Fernanda e Lucas",
+    route: "América do Sul",
+    text: "A personalização do roteiro fez toda diferença. Voltamos com lembranças incríveis e já planejando a próxima viagem.",
   },
 ];
 
 const CompaniesSection = () => {
   return (
-    <section id="companhias" className="section-shell bg-background py-20 md:py-28">
+    <section id="depoimentos" className="section-shell bg-background py-20 md:py-28">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <span className="section-kicker">Parceiros</span>
+          <span className="section-kicker">Clientes Oceanun</span>
           <h2 className="section-title">
-            Principais <span className="text-gradient-ocean">Companhias</span>
+            O que nossos clientes <span className="text-gradient-ocean">dizem</span>
           </h2>
           <p className="section-intro">
-            Explore o mundo com as principais companhias marítimas, reconhecidas pela excelência em cruzeiros de luxo!
+            Histórias reais de viajantes que viveram experiências marcantes com a nossa curadoria.
           </p>
           <div className="ocean-divider" />
         </div>
         <div className="grid md:grid-cols-2 gap-8">
-          {companies.map((c) => (
+          {testimonials.map((c) => (
             <div
               key={c.name}
-              className="group overflow-hidden rounded-3xl border border-primary/10 bg-card transition-all duration-500 hover:-translate-y-1 hover:shadow-card-hover"
+              className="group rounded-3xl border border-primary/10 bg-card p-8 transition-all duration-500 hover:-translate-y-1 hover:shadow-card-hover"
             >
-              <div className="overflow-hidden h-56">
-                <img
-                  src={c.image}
-                  alt={c.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
+              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+                <Quote className="h-6 w-6 text-primary" />
               </div>
-              <div className="p-6 md:p-8">
-                <h3 className="text-2xl font-display font-bold text-foreground mb-4">{c.name}</h3>
-                <ul className="space-y-2">
-                  {c.features.map((f, i) => (
-                    <li key={i} className="flex items-start gap-2 text-muted-foreground text-sm">
-                      <span className="text-primary mt-0.5">⎈</span>
-                      {f}
-                    </li>
-                  ))}
-                </ul>
+              <p className="mb-6 text-muted-foreground leading-relaxed">"{c.text}"</p>
+              <div>
+                <h3 className="text-xl font-display font-bold text-foreground">{c.name}</h3>
+                <p className="text-sm text-primary mt-1">{c.route}</p>
               </div>
             </div>
           ))}
