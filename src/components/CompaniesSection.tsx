@@ -1,29 +1,57 @@
+import { useState } from "react";
 import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Camila e Rafael",
-    route: "Cruzeiro no Caribe",
-    text: "Cada detalhe foi pensado com muito carinho. Embarcamos com tudo organizado e vivemos uma experiência inesquecível.",
+    name: "Elizabete Resende",
+    text: "Débora quero te agradecer pelo carinho e dedicação, fez toda a diferença! Foi maravilhosa a viagem.",
   },
   {
-    name: "Priscila A.",
-    route: "Pacote completo no Nordeste Brasileiro",
-    text: "Foi nossa primeira viagem em família com esse nível de suporte. A Oceanun cuidou de tudo com agilidade e atenção.",
+    name: "Florena Cadetti",
+    text: "Oi Débora, queria agradecer pela atenção e carinho. A viagem foi inesquecível, maravilhosa, uma experiência incrível mesmo, amamos! Já tô indicando pra todo mundo!",
   },
   {
-    name: "Daniel M.",
-    route: "Mediterrâneo",
-    text: "Atendimento impecável do início ao fim. Recebemos orientações claras e aproveitamos cada etapa sem preocupações.",
+    name: "Adriana Carvalho",
+    text: "Oi Débora!! A viagem foi ótima, tenho que agradecer muito a vc !! Foi nosso 'anjo da guarda' em Londres, que se tornou o nosso local preferido...queremos muito voltar.😊 Falei para minhas amigas de vc ....que nem te conheci pessoalmente e sentia você como uma amiga. Que o quanto é bom fazer um passeio desse com uma agência séria e uma pessoa de coração tão bom como vc.",
   },
   {
-    name: "Fernanda e Lucas",
-    route: "América do Sul",
-    text: "A personalização do roteiro fez toda diferença. Voltamos com lembranças incríveis e já planejando a próxima viagem.",
+    name: "Suelen de Brito",
+    text: "Oie Débora, quero te agradecer por todo suporte que você me deu para que essa viagem saísse da melhor forma possível. Seu atendimento realmente fez a diferença! Nós amamos a viagem, minha família queria fazer cruzeiro mas isso era apenas um sonho que eles tinham e eu não sabia, acertei em cheio na surpresa. Realmente ser cliente Yach Club é um diferencial, fomos muito bem recepcionados no porto e o embarque foi imediato e sem filas. Agradeço mais uma vez todo suporte que vc me deu para que tudo se realizasse como sonhei. Logo logo estarei entrando em contato para agendar a próxima viagem😉☺️",
+  },
+  {
+    name: "Pedro Sasso",
+    text: "Débora muito obrigado pela sua atenção e cuidado conosco. Sempre prestativa. Viagem maravilhosa.",
+  },
+  {
+    name: "Mayara Martinez",
+    text: "Nossa foi surpreendentemente maravilhoso 😍😍😍😍 Obrigada por tudo!",
+  },
+  {
+    name: "Ana Varani",
+    text: "Obrigada Débora, por todo o suporte, pelas dicas valiosas e espero que seja só a primeira de muitas 🛳️🌍 foi tudo perfeito! 🤩",
+  },
+  {
+    name: "Regina Almeida",
+    text: "Debora!!! Obrigada por essa oportunidade e experiência deslumbrante que foi esses dias no Costa Favolosa, organizado pela Oceanun… Gratidão 🙏🏽👏🏻👏🏻🥰",
+  },
+  {
+    name: "Rayssa Gonçalves",
+    text: "Ficamos apaixonadas com a viagem e o Cruzeiro. Sempre tive muita vontade de fazer, mas superou todas as minhas expectativas. Tudo no Cruzeiro era impecável e conhecer tanto país em pouco tempo foi incrível. E pra fechar com chave de ouro, ontem no final da noite teve um sorteio no Cruzeiro que eu fui a ganhadora !!",
   },
 ];
 
+const LONG_TEXT_THRESHOLD = 170;
+
 const CompaniesSection = () => {
+  const [expandedTestimonials, setExpandedTestimonials] = useState<Record<string, boolean>>({});
+
+  const handleToggleExpand = (name: string) => {
+    setExpandedTestimonials((prev) => ({
+      ...prev,
+      [name]: !prev[name],
+    }));
+  };
+
   return (
     <section id="depoimentos" className="section-shell bg-background py-20 md:py-28">
       <div className="container mx-auto px-4">
@@ -37,7 +65,7 @@ const CompaniesSection = () => {
           </p>
           <div className="ocean-divider" />
         </div>
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((c) => (
             <div
               key={c.name}
@@ -46,10 +74,34 @@ const CompaniesSection = () => {
               <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                 <Quote className="h-6 w-6 text-primary" />
               </div>
-              <p className="mb-6 text-muted-foreground leading-relaxed">"{c.text}"</p>
+              <p
+                className="mb-2 text-muted-foreground leading-relaxed"
+                style={
+                  expandedTestimonials[c.name]
+                    ? undefined
+                    : {
+                        display: "-webkit-box",
+                        WebkitLineClamp: 3,
+                        WebkitBoxOrient: "vertical",
+                        overflow: "hidden",
+                      }
+                }
+              >
+                "{c.text}"
+              </p>
+              {c.text.length > LONG_TEXT_THRESHOLD ? (
+                <button
+                  type="button"
+                  onClick={() => handleToggleExpand(c.name)}
+                  className="mb-6 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
+                >
+                  {expandedTestimonials[c.name] ? "Ler menos" : "Ler mais"}
+                </button>
+              ) : (
+                <div className="mb-6" />
+              )}
               <div>
                 <h3 className="text-xl font-display font-bold text-foreground">{c.name}</h3>
-                <p className="text-sm text-primary mt-1">{c.route}</p>
               </div>
             </div>
           ))}
