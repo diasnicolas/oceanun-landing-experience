@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Quote } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const testimonials = [
   {
@@ -43,6 +44,7 @@ const testimonials = [
 const LONG_TEXT_THRESHOLD = 170;
 
 const CompaniesSection = () => {
+  const isMobile = useIsMobile();
   const [expandedTestimonials, setExpandedTestimonials] = useState<Record<string, boolean>>({});
 
   const handleToggleExpand = (name: string) => {
@@ -66,45 +68,53 @@ const CompaniesSection = () => {
           <div className="ocean-divider" />
         </div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {testimonials.map((c) => (
-            <div
-              key={c.name}
-              className="group rounded-3xl border border-primary/10 bg-card p-8 transition-all duration-500 hover:-translate-y-1 hover:shadow-card-hover"
-            >
-              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
-                <Quote className="h-6 w-6 text-primary" />
-              </div>
-              <p
-                className="mb-2 text-muted-foreground leading-relaxed"
-                style={
-                  expandedTestimonials[c.name]
-                    ? undefined
-                    : {
-                        display: "-webkit-box",
-                        WebkitLineClamp: 3,
-                        WebkitBoxOrient: "vertical",
-                        overflow: "hidden",
-                      }
-                }
+          {testimonials.map((c) => {
+            const isExpanded = expandedTestimonials[c.name];
+            const shouldShowToggle = isMobile || c.text.length > LONG_TEXT_THRESHOLD;
+            const shouldClamp = shouldShowToggle && !isExpanded;
+
+            return (
+              <div
+                key={c.name}
+                className="group rounded-3xl border border-primary/10 bg-card p-8 transition-all duration-500 hover:-translate-y-1 hover:shadow-card-hover"
               >
-                "{c.text}"
-              </p>
-              {c.text.length > LONG_TEXT_THRESHOLD ? (
-                <button
-                  type="button"
-                  onClick={() => handleToggleExpand(c.name)}
-                  className="mb-6 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
+                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+                  <Quote className="h-6 w-6 text-primary" />
+                </div>
+                <p
+                  className={`${shouldShowToggle ? "mb-2" : "mb-6"} text-muted-foreground leading-relaxed`}
+                  style={
+                    shouldClamp
+                      ? {
+                          display: "-webkit-box",
+                          WebkitLineClamp: 3,
+                          WebkitBoxOrient: "vertical",
+                          overflow: "hidden",
+                        }
+                      : {
+                          display: "block",
+                        }
+                  }
                 >
-                  {expandedTestimonials[c.name] ? "Ler menos" : "Ler mais"}
-                </button>
-              ) : (
-                <div className="mb-6" />
-              )}
-              <div>
-                <h3 className="text-xl font-display font-bold text-foreground">{c.name}</h3>
+                  "{c.text}"
+                </p>
+                {shouldShowToggle ? (
+                  <button
+                    type="button"
+                    onClick={() => handleToggleExpand(c.name)}
+                    className="mb-6 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
+                  >
+                    {isExpanded ? "Ler menos" : "Ler mais"}
+                  </button>
+                ) : (
+                  <div className="mb-6" />
+                )}
+                <div>
+                  <h3 className="text-xl font-display font-bold text-foreground">{c.name}</h3>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

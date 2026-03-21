@@ -15,6 +15,7 @@ import gallery12 from "@/assets/galeria_12.jpg";
 import gallery13 from "@/assets/galeria_13.jpg";
 import gallery14 from "@/assets/galeria_14.jpg";
 import gallery15 from "@/assets/galeria_15.jpg";
+import gallery16 from "@/assets/galeria_16.jpg";
 
 const images = [
   { src: gallery1, alt: "Foto de viagens 1" },
@@ -32,6 +33,7 @@ const images = [
   { src: gallery13, alt: "Foto de viagens 13" },
   { src: gallery14, alt: "Foto de viagens 14" },
   { src: gallery15, alt: "Foto de viagens 15" },
+  { src: gallery16, alt: "Foto de viagens 16" },
 ];
 
 const GallerySection = () => {
