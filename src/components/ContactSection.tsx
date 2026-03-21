@@ -72,6 +72,12 @@ const ContactSection = () => {
         </form>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-5 text-center">
           <a
+            href="mailto:contato@oceanun.com.br"
+            className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
+          >
+            contato@oceanun.com.br
+          </a>
+          <a
             href="https://instagram.com/oceanun.ag"
             target="_blank"
             rel="noopener noreferrer"

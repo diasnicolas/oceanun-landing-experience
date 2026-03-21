@@ -12,6 +12,15 @@ const Footer = () => {
           <div className="text-center md:text-right space-y-2 text-sm text-primary-foreground/75">
             <p>CNPJ: 50.309.568/0001-67</p>
             <p>WhatsApp: +55 (19) 97819-4930</p>
+            <p>
+              E-mail:{" "}
+              <a
+                href="mailto:contato@oceanun.com.br"
+                className="hover:text-secondary transition-colors"
+              >
+                contato@oceanun.com.br
+              </a>
+            </p>
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-end">
               <a
                 href="https://instagram.com/oceanun.ag"
