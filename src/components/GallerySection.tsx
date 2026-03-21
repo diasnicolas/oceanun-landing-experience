@@ -1,19 +1,37 @@
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
-import gallery4 from "@/assets/gallery-4.jpg";
-import gallery5 from "@/assets/gallery-5.jpg";
-import gallery6 from "@/assets/gallery-6.jpg";
+import gallery1 from "@/assets/galeria_1.jpg";
+import gallery2 from "@/assets/galeria_2.jpg";
+import gallery3 from "@/assets/galeria_3.jpg";
+import gallery4 from "@/assets/galeria_4.jpg";
+import gallery5 from "@/assets/galeria_5.jpg";
+import gallery6 from "@/assets/galeria_6.jpg";
+import gallery7 from "@/assets/galeria_7.jpg";
+import gallery8 from "@/assets/galeria_8.jpg";
+import gallery9 from "@/assets/galeria_9.jpg";
+import gallery10 from "@/assets/galeria_10.jpg";
+import gallery11 from "@/assets/galeria_11.jpg";
+import gallery12 from "@/assets/galeria_12.jpg";
+import gallery13 from "@/assets/galeria_13.jpg";
+import gallery14 from "@/assets/galeria_14.jpg";
+import gallery15 from "@/assets/galeria_15.jpg";
 
 const images = [
-  { src: gallery1, alt: "Casal apreciando o pôr do sol no cruzeiro" },
-  { src: gallery2, alt: "Ilha tropical com cruzeiro" },
-  { src: gallery3, alt: "Piscina no deck do navio" },
-  { src: gallery4, alt: "Santorini vista do mar" },
-  { src: gallery5, alt: "Restaurante de luxo a bordo" },
-  { src: gallery6, alt: "Fiordes noruegueses" },
+  { src: gallery1, alt: "Foto de viagens 1" },
+  { src: gallery2, alt: "Foto de viagens 2" },
+  { src: gallery3, alt: "Foto de viagens 3" },
+  { src: gallery4, alt: "Foto de viagens 4" },
+  { src: gallery5, alt: "Foto de viagens 5" },
+  { src: gallery6, alt: "Foto de viagens 6" },
+  { src: gallery7, alt: "Foto de viagens 7" },
+  { src: gallery8, alt: "Foto de viagens 8" },
+  { src: gallery9, alt: "Foto de viagens 9" },
+  { src: gallery10, alt: "Foto de viagens 10" },
+  { src: gallery11, alt: "Foto de viagens 11" },
+  { src: gallery12, alt: "Foto de viagens 12" },
+  { src: gallery13, alt: "Foto de viagens 13" },
+  { src: gallery14, alt: "Foto de viagens 14" },
+  { src: gallery15, alt: "Foto de viagens 15" },
 ];
 
 const GallerySection = () => {
